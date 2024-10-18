@@ -1,0 +1,61 @@
+@use "./assets/styles/fonts.scss";
+@use "./assets/styles/colors.scss" as *;
+
+:root {
+  background-color: $neutral-dark-blue;
+  box-sizing: border-box;
+}
+
+.advice-container {
+  text-align: center;
+  color: $primary-light-cyan;
+  background-color: $neutral-dark-grayish-blue;
+  border-radius: 0.8rem;
+  padding-block: 2rem;
+  max-width: 35rem;
+  margin: 10rem auto;
+
+  p {
+    font-family: "Manrope-Extra-Bold";
+    margin-inline:2rem;
+  }
+
+  .advice-text {
+    font-size: 28px;
+  }
+  .advice-number {
+    letter-spacing: 2px;
+    color: $primary-neon-green;
+  }
+
+  .divider-icon {
+    margin: 0 auto;
+
+    &.mobile {
+      @media screen and (min-width: 1280px) {
+        display: none;
+      }
+    }
+    &.desktop {
+      display: none;
+      @media screen and (min-width: 1280px) {
+        display: block;
+      }
+    }
+  }
+  button {
+    position: relative;
+    top: 60px;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-neon-green;
+    border: none;
+    border-radius: 2rem;
+    margin: 0 auto;
+    &:hover, &:active{
+      box-shadow: 0px 0px 25px $primary-neon-green;
+    }
+  }
+}
